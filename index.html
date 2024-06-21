@@ -6,8 +6,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Beneficios de Bootstrap</title>
-    
 </head>
+<style>
+  body {
+      background-color: #67d2f3; /* Cambio el color fondo */
+  }
+</style>
 <body>
   <!-- Barra de navegación -->
   <nav class="navbar navbar-expand-lg bg-body-tertiary bg-colorfondo" data-bs-theme="dark">
@@ -22,10 +26,10 @@
                     <a class="nav-link active" aria-current="page" href="#collapseOne">Aporte</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#collapseOne">Perjuicio</a>
+                    <a class="nav-link active" aria-current="page" href="#collapseTwo">Perjuicio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link disabled"href="#"></a>
+                    <a class="nav-link disabled" href="#"></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link disabled"></a>
@@ -33,106 +37,108 @@
             </ul>
         </div>
     </div>
-</nav>
-<!-- Cierre barra de navegación -->
+  </nav>
+  <!-- Cierre barra de navegación -->
 
-<!-- Carrusel de imágenes -->
-<div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-inner">
-      <div class="carousel-item active" data-bs-interval="100000">
-          <img src="css/bootstrap-carousel-01.jpg" class="d-block w-100 custom-img-size" alt="Imagen 1">
-      </div>
-      <div class="carousel-item" data-bs-interval="2000">
-          <img src="css/logo_bootstrap.jpg" class="d-block w-100 custom-img-size" alt="Imagen 2">
-      </div>
-      <div class="carousel-item">
-          <img src="css/Tercera imagen.jpg" class="d-block w-100 custom-img-size" alt="Imagen 3">
-      </div>
-      <div class="carousel-item">
-          <img src="css/cuarta imagen.jpg" class="d-block w-100 custom-img-size" alt="Imagen 4">
-      </div>
+  <!-- Carrusel de imágenes -->
+  <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="css/bootstrap-carousel-01.jpg" class="d-block w-100 custom-img-size" alt="Imagen 1">
+        </div>
+        <div class="carousel-item">
+            <img src="css/logo_bootstrap.jpg" class="d-block w-100 custom-img-size" alt="Imagen 2">
+        </div>
+        <div class="carousel-item">
+            <img src="css/Tercera imagen.jpg" class="d-block w-100 custom-img-size" alt="Imagen 3">
+        </div>
+        <div class="carousel-item">
+            <img src="css/cuarta imagen.jpg" class="d-block w-100 custom-img-size" alt="Imagen 4">
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
   </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-  </button>
-</div>
-<!-- Fin del Carrusel -->
+  <!-- Fin del Carrusel -->
 
-<!-- Título y texto -->
-<div class="container center">
-    <div class="display-3">Bootstrap: ¿bueno o malo?</div>
-    <p class="lead">Un acercamiento acerca de las ventajas y desventajas de utilizar Bootstrap.</p>
-    <p class="text-end">Texto de ejemplo alineado a la derecha.</p>
-</div>
-<!-- Fin del título y texto -->
+  <!-- Título y texto -->
+  <div class="container center">
+      <div class="display-3">Bootstrap: ¿bueno o malo?</div>
+      <p class="lead">Un acercamiento acerca de las ventajas y desventajas de utilizar Bootstrap.</p>
+      <p class="text-end"></p>
+  </div>
+  <!-- Fin del título y texto -->
 
-<!-- Acordeón -->
-<div class="accordion" id="accordionExample">
-  <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button" type="button" aria-expanded="true" aria-controls="collapseOne">
-        Aporte
-      </button>
-    </h2>
-    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-      <div class="accordion-body">
-        Contenido del primer acordeón relacionado con el aporte.
+  <!-- Acordeón -->
+  <div class="accordion" id="accordionExample">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingOne">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Aporte
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          Contenido del primer acordeón relacionado con el aporte.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingTwo">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Perjuicio
+        </button>
+      </h2>
+      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+        <div class="accordion-body">
+          Contenido del segundo acordeón relacionado con el perjuicio.
+        </div>
       </div>
     </div>
   </div>
-  <div class="accordion-item">
-    <h2 class="accordion-header">
-      <button class="accordion-button collapsed" type="button" aria-expanded="false" aria-controls="collapseTwo">
-        Perjuicio
-      </button>
-    </h2>
-    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-      <div class="accordion-body">
-        Contenido del segundo acordeón relacionado con el perjuicio.
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Fin del acordeón -->
+  <!-- Fin del acordeón -->
 
-<script src="js/bootstrap.min.js"></script>
-<script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var myCarousel = new bootstrap.Carousel(document.getElementById('carouselExampleInterval'), {
+        interval: 2500,
+        wrap: true
+      });
 
-<script>
-  // Script para manejar el desplazamiento suave y la activación del acordeón
-  document.addEventListener('DOMContentLoaded', function() {
-    const links = document.querySelectorAll('.nav-link');
-    links.forEach(link => {
-      link.addEventListener('click', function(e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href').substring(1); // Eliminar el "#" del href
-        const target = document.getElementById(targetId);
-        if (target) {
-          // Cerrar todos los acordeones abiertos
-          const accordions = document.querySelectorAll('.accordion .accordion-collapse');
-          accordions.forEach(acc => {
-            if (acc.classList.contains('show')) {
-              acc.classList.remove('show');
-            }
-          });
+      // Script para manejar el desplazamiento suave y la activación del acordeón
+      const links = document.querySelectorAll('.nav-link');
+      links.forEach(link => {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          const targetId = this.getAttribute('href').substring(1); // Eliminar el "#" del href
+          const target = document.getElementById(targetId);
+          if (target) {
+            // Cerrar todos los acordeones abiertos
+            const accordions = document.querySelectorAll('.accordion .accordion-collapse');
+            accordions.forEach(acc => {
+              if (acc.classList.contains('show')) {
+                acc.classList.remove('show');
+              }
+            });
 
-          // Abrir el acordeón correspondiente
-          target.classList.add('show');
+            // Abrir el acordeón correspondiente
+            target.classList.add('show');
 
-          // Desplazar la página al acordeón
-          target.scrollIntoView({
-            behavior: 'smooth'
-          });
-        }
+            // Desplazar la página al acordeón
+            target.scrollIntoView({
+              behavior: 'smooth'
+            });
+          }
+        });
       });
     });
-  });
-</script>
-
+  </script>
 </body>
 </html>
